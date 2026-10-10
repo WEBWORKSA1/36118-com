@@ -1,0 +1,35 @@
+# Phase-wise build prompts for 36118.com
+
+Use these in order to rebuild, extend or hand off the site. Each prompt is self-contained.
+
+---
+
+## Phase 1 — Research and positioning
+> Research the number "36118" across commerce, business, AI, economy and people (ZIP code, mathematics, Chinese number culture, numeric-domain market, trademarks). Benchmark at least 25 leading sites in calculators, number facts, ZIP data, domain appraisal and donations. Output a decision memo: the single most profitable site concept for 36118.com, the revenue stack (AdSense, lead gen, sponsorship, donations), rejected alternatives with reasons, and the features to copy from each benchmark site. Save as RESEARCH.md.
+
+## Phase 2 — Information architecture and design system
+> Design a static, multi-page site for 36118.com, a "number intelligence" platform. Pages: Home, Tools index + 4 tools (Number decoder, ZIP & postal explorer, Lucky-number reader, Domain scorecard), "36118" profile, Guides index + 12 guides, Videos, Buy/sell/appraise (lead gen), Advertise, Support (donations), Contests, Careers, About, Contact, Privacy, Terms, Disclaimer & trademarks, 404. Create a token system: deep postal navy #13233F, cool paper #F6F7F9, signal yellow #F2C230, graph blue #2459C7, success #1F8A70; Bricolage Grotesque for headings, Atkinson Hyperlegible for body, IBM Plex Mono only for split-flap digit tiles. The memorable element is a split-flap number input in the hero that decodes as you type. Tools are listed as directory rows, not identical cards. Support light/dark mode, keyboard focus, reduced motion and a 390px mobile layout with no horizontal scroll.
+
+## Phase 3 — Global chrome and compliance
+> On every page: (1) a top strip reading "Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership" linking to https://web.works/contact; (2) the AdSense script `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>` in the head plus `<meta name="google-adsense-account" content="ca-pub-6620975821265271">`; (3) header nav, footer with legal links, cookie notice linking to Google Ads Settings. Add ads.txt (`google.com, pub-6620975821265271, DIRECT, f08c47fec0942fa0`), robots.txt, sitemap.xml, canonical URLs on https://36118.com, Open Graph tags, Organization/WebSite/SearchAction/Breadcrumb/FAQPage/Article/WebApplication/VideoObject JSON-LD. Use relative links so the site works both on GitHub Pages (/36118-com/) and on the custom domain.
+
+## Phase 4 — Number engine and tools
+> Write a dependency-free JavaScript number engine: exact prime factorisation up to 15 digits, divisors, σ, φ, perfect/abundant/deficient, previous/next prime, square/cube/triangular/Fibonacci/Harshad/palindrome checks, bases 2/8/16/36, English words, Roman numerals, digital root, Chinese-homophone luck score (8, 6, 9 positive; 4 negative; combos 168, 518, 888, 118; chip bonus), memorability score, and a transparent domain liquidity scorecard (length class, chip status, leading zero, final 8, patterns, TLD weight) that outputs a 0–10 score and tier but no dollar figure. Build the four tool pages with shareable URLs (?n=, ?zip=&c=, ?d=), an explanation section and an FAQ under each tool. The ZIP explorer uses the free CORS API api.zippopotam.us for 14 countries (US, CA, GB, IN, DE, FR, ES, IT, AU, JP, MX, BR, NL, LK), an OpenStreetMap embed, and a straight-line distance calculator. Handle not-found unique ZIP codes with a helpful message.
+
+## Phase 5 — Content for AdSense approval
+> Write 12 original guides of 600–900 words each, with H2 structure, a callout, 3 FAQs and internal links to tools: unique ZIP codes (36118 case study), how ZIP codes work, Chinese lucky numbers in business, numeric domains (3N/4N/5N, chips, scarcity table), valuing a domain, Benford's law, how AI reads numbers, reading economic numbers, primes and encryption, number bases, choosing a business phone number, numerology vs number science. Write the 36118 profile page (postal, maths, culture, asset class, AI/economy). No thin or auto-generated pages; every page must have unique, useful text. Embed relevant YouTube explainers with a click-to-load "lite" player using youtube-nocookie.com.
+
+## Phase 6 — Lead generation, donations, contests, hiring
+> Build a three-step lead funnel (Goal → Details → Contact) with six intents (Buy numeric domain, Sell/appraise, Acquire 36118.com, Number & naming strategy, Sponsor/partner, Data/API), budget and timeline selects, consent checkbox, honeypot, trust signals, and a client-side lead grade (HOT/WARM/NURTURE) added to the submission. Add a compact 3-field lead form on the home page and an appraisal CTA directly under every domain score. Build: Support page with preset amounts, monthly option and allocation sliders (operations, tools & talent, promotion, contest prizes) plus optional PayPal/Stripe/Buy-Me-a-Coffee links from config; Contest page ("Number Hunt") with rules, judging weights and entry form; Careers page with five roles and application form; Advertise page with placements, standards and media-kit form; Contact page.
+
+## Phase 7 — Private inbox wiring
+> Route every form to the owner's private inbox via FormSubmit's AJAX endpoint, but never expose the address: store it base64-split in JS and assemble it only at send time. "Email us" links open the mail app on click without the address appearing in the HTML. Verify with a repo-wide search that the plain address appears nowhere in HTML, CSS or JS. Note: the first submission triggers a one-time FormSubmit activation email that must be confirmed.
+
+## Phase 8 — QA
+> Run headless-browser checks at 1280px and 390px: no horizontal overflow on any page, no console errors, every internal link resolves, every page contains the AdSense script and the top contact strip, lead funnel submits a complete payload. Screenshot home, a tool, the lead page and a guide and fix any visual issues.
+
+## Phase 9 — Publish
+> Push to github.com/WEBWORKSA1/36118-com (main branch, files at repo root, `.nojekyll` present). Enable GitHub Pages: Settings → Pages → Deploy from branch → main / root. Then attach the domain: add a `CNAME` file containing `36118.com`, set DNS A records for the apex to 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 and a CNAME for `www` to `webworksa1.github.io`, and tick "Enforce HTTPS".
+
+## Phase 10 — Monetise and grow (post-launch)
+> Apply to AdSense with the site on the custom domain; enable Auto ads and Google's consent message (Privacy & messaging) for EEA/UK. After approval, create display units and paste their slot IDs into `CONFIG.adSlots` in assets/js/site.js to fill the reserved positions (below hero, in-content, sidebar, footer). Submit sitemap.xml in Search Console. Add one guide per week via `_build/guides.py` and rerun `python3 _build/build.py`. Next expansions: static pages for 100 popular numbers (each with unique computed facts and editorial notes), a numeric-domain sales tracker, a newsletter, and a YouTube channel feeding the Videos page.

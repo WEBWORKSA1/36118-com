@@ -1,0 +1,20 @@
+{
+ "name": "36118.com",
+ "short_name": "36118",
+ "start_url": "./index.html",
+ "display": "standalone",
+ "background_color": "#F6F7F9",
+ "theme_color": "#13233F",
+ "icons": [
+  {
+   "src": "assets/img/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "assets/img/favicon.svg",
+   "type": "image/svg+xml",
+   "sizes": "any"
+  }
+ ]
+}
